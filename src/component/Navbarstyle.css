@@ -1,0 +1,103 @@
+* {
+  box-sizing: border-box;
+}
+
+.body {
+  margin: 0;
+}
+
+nav {
+  position: fixed;
+  background-color: rgb(208, 229, 247);
+  color: black;
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+  flex-direction: row;
+  align-items: center;
+  box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.15);
+  padding: 0.5vw 8vw;
+  width: 100%;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+  font-family: 'Lato', sans-serif;
+}
+
+nav .site-title {
+  width: 250px; 
+  height: 70px;
+  cursor: pointer;
+}
+
+.nav ul {
+  padding: 0;
+  margin: 0;
+  font-weight: bolder;
+  font-size: 1.3rem;
+  list-style: none;
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+  align-items: center;
+  text-align: center;
+  width: 100%;
+}
+
+.nav i {
+  margin-right: 10px;
+}
+
+.nav img {
+  width: 120px; 
+  height: 100px;
+  cursor: pointer;
+}
+
+.nav a {
+  color: inherit;
+  text-decoration: none;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  padding: 0 0.5rem;
+}
+
+/* Remove the blue box and add a different highlight for the active link */
+.nav li.active a {
+  font-weight: bold;
+  color: #1194eb; /* Highlight the active link with a different color */
+  text-decoration: underline; /* Optionally add an underline */
+}
+
+.nav li:hover {
+  background-color: #3b0ce2;
+  color: white;
+}
+
+.nav li.active {
+  background-color: transparent; /* Ensure background is transparent for the active link */
+}
+
+.search-bar {
+  display: flex;
+  align-items: center;
+}
+
+.search-bar input[type="search"] {
+  padding: 0.4rem;
+  margin-right: 0.5rem;
+}
+
+.search-bar button {
+  padding: 0.4rem 0.8rem;
+  background-color: #320ae7;
+  color: white;
+  border: none;
+  cursor: pointer;
+  border-radius: 10px;
+}
+
+.search-bar button:hover {
+  background-color: #10a0f3;
+}

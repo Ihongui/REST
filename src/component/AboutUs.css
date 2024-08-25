@@ -1,0 +1,207 @@
+body {
+  font-family: "Arial", sans-serif;
+  font-size: 20px;
+  /* Base font size */
+  margin: 0;
+  padding: 0;
+  background-color: #fff;
+}
+
+.header {
+  text-align: center;
+  font-size: 32px;
+  /* Header font size */
+  padding: 20px;
+  /* Padding to avoid collapsing space */
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 0;
+  /* Remove any margin to eliminate gap */
+  width: 100%;
+  /* Full-width navbar */
+}
+
+.logo {
+  font-size: 36px;
+  /* Logo font size */
+  font-weight: bold;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 30px;
+  /* Gap between navigation links */
+}
+
+.nav-links li {
+  cursor: pointer;
+  font-size: 24px;
+  /* Nav link font size */
+}
+
+.social-icons {
+  display: flex;
+  gap: 20px;
+  /* Gap between social icons */
+}
+
+.social-icons a {
+  color: #333;
+  font-size: 28px;
+  /* Social icon font size */
+}
+
+.main-content {
+  padding: 60px 20px;
+  /* Padding for spacing */
+  text-align: center;
+  font-size: 22px;
+  /* Main content text size */
+}
+
+.intro-section {
+  position: relative;
+  margin-bottom: 60px;
+  /* Margin for spacing */
+}
+
+.welcome-text,
+.how-to-text,
+.learn-more-text,
+.lose-payment-text {
+  background-color: #ffffff;
+  border: 2px solid #fbd0d9;
+  padding: 12px;
+  /* Padding for buttons */
+  display: inline-block;
+  margin: 12px;
+  /* Margin for buttons */
+  font-weight: bold;
+  font-size: 20px;
+  /* Button text size */
+}
+
+.welcome-text {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+}
+
+.how-to-text {
+  position: absolute;
+  top: 80px;
+  left: 20px;
+}
+
+.learn-more-text {
+  position: absolute;
+  top: 140px;
+  right: 20px;
+}
+
+.lose-payment-text {
+  position: absolute;
+  top: 200px;
+  right: 20px;
+}
+
+.profile-container {
+  margin-top: 180px;
+  /* Adjusted for better alignment */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 30px;
+  /* Gap between profile image and text */
+}
+
+.profile-image {
+  border-radius: 50%;
+  width: 180px;
+  /* Profile image width */
+  height: 180px;
+  /* Profile image height */
+}
+
+.about-us-text {
+  max-width: 600px;
+  /* Max width for text */
+  text-align: left;
+  font-size: 20px;
+  /* About Us text size */
+}
+
+/* Updated sections for How to Use the App and Lost Receipt Information */
+.how-to-section {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px;
+  background-color: #b7c7e0;
+  /* Background color matching the provided image */
+  border-radius: 10px;
+  /* Rounded corners for a smooth look */
+}
+
+.how-to-container,
+.lost-receipt-container {
+  width: 48%;
+  /* Adjusted width for each section */
+  padding: 15px;
+  /* Internal padding for better spacing */
+}
+
+.how-to-container h2,
+.lost-receipt-container h2 {
+  margin-bottom: 12px;
+  /* Space below the headings */
+  font-size: 24px;
+  /* Font size for headings */
+  font-weight: bold;
+  /* Bold headings */
+  color: #000;
+  /* Black text color for the headings */
+}
+
+.how-to-container ul,
+.lost-receipt-container ul {
+  list-style: none;
+  /* Remove default list styling */
+  padding: 0;
+  font-size: 18px;
+  /* Adjust font size for list items */
+}
+
+.how-to-container ul li,
+.lost-receipt-container ul li {
+  margin-bottom: 10px;
+  /* Space between list items */
+  display: flex;
+  align-items: center;
+}
+
+.how-to-container ul li::before,
+.lost-receipt-container ul li::before {
+  content: '★';
+  /* Star icon as bullet points */
+  margin-right: 8px;
+  /* Space between icon and text */
+  color: #000;
+  /* Black color for bullet points */
+}
+
+.lost-receipt-container ul li:nth-child(4)::before {
+  content: '☎️';
+  /* Phone icon for the fourth item */
+  margin-right: 8px;
+}
+
+.lost-receipt-container ul li:nth-child(5)::before {
+  content: '✉️';
+  /* Email icon for the fifth item */
+  margin-right: 8px;
+}

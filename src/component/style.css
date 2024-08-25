@@ -1,0 +1,1304 @@
+/*HOME PAGE*/
+
+video {
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  z-index: -1;
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  background-position: center;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  margin-bottom: 0;
+}
+
+.video-container {
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  box-shadow: inset 0 0 0 100px rgba(0, 0, 0.2) object-fit contain;
+  margin: 0 auto;
+}
+
+.video-container > h1 {
+  color: white;
+  font-size: 100px;
+  margin-top: -100px;
+}
+
+.video-container > h2 {
+  color: white;
+  font-size: 50px;
+  margin-top: 0;
+}
+
+.video-container > p {
+  color: white;
+  margin-top: 8px;
+  font-size: 30px;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode" "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
+}
+
+@media screen and (max-width: 960px) {
+  .video-container > h1 {
+    font-size: 70px;
+    margin-top: -150px;
+  }
+}
+@media screen and (max-width: 760px) {
+  .video-container > h1 {
+    font-size: 50px;
+    margin-top: 100px;
+    .video-container > p {
+      font-size: 20px;
+    }
+  }
+}
+
+.Rest {
+  text-align: center;
+  margin-top: 0;
+  margin-bottom: 20px;
+}
+
+.Rest a {
+  text-align: center;
+  padding: 10px;
+  font-size: large;
+  font-weight: bold;
+  background: orangered;
+}
+
+.rooms {
+  /*padding: 8vw 8vw 0 8vw;*/
+  text-align: center;
+  color: rgb(44, 44, 80);
+  margin-top: none;
+}
+
+.rooms h1 {
+  margin-top: 0;
+  font-size: 40px;
+  text-align: left;
+}
+
+.rooms p {
+  text-align: left;
+  font-size: 20px;
+}
+
+.rooms .room-box {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+  grid-gap: 1rem;
+  margin-top: 20px;
+  margin-bottom: 50px;
+  text-align: right;
+}
+
+.room-box .room h6 {
+  margin-bottom: 0;
+  margin-top: 0;
+  font-size: large;
+}
+
+.room-box .room {
+  text-align: start;
+  background: white;
+  height: 80%;
+  margin-bottom: 0%;
+  margin-top: 0%;
+}
+
+.room-box .room .lk {
+  display: flex;
+  gap: 25px;
+  margin-top: 20px;
+  margin-bottom: 10px;
+  align-items: center;
+  margin-left: 8px;
+  overflow: hidden;
+}
+
+.room-box .room .lk .like-button {
+  padding: 8px 12px;
+  border: none;
+  outline: none;
+  color: white;
+  cursor: pointer;
+  position: relative;
+  z-index: 0;
+  border-radius: 12px;
+}
+
+.room-box .room .lk .like-button::after {
+  content: "";
+  z-index: -1;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: #333;
+  left: 0;
+  top: 0;
+  border-radius: 10px;
+}
+
+.room-box .room .lk .like-button::before {
+  content: "";
+  background: linear-gradient(
+    #ff0000,
+    #ff7300,
+    #fffb00,
+    #48ff00,
+    #00ffd5,
+    #002bff,
+    #ff00c8,
+    #ff0000
+  );
+  position: absolute;
+  top: -2px;
+  left: -2px;
+  background-size: 600%;
+  z-index: -1;
+  width: calc(100% + 4px);
+  height: calc(100% + 4px);
+  filter: blur(8px);
+  animation: glowing 20s linear infinite;
+  transition: opacity 0.3s ease-in-out;
+  border-radius: 10px;
+  opacity: 1;
+}
+
+@keyframes glowing {
+  0% {
+    background-position: 0 0;
+  }
+  50% {
+    background-position: 400% 0;
+  }
+  100% {
+    background-position: 0 0;
+  }
+}
+
+/* Dislike Button */
+.room-box .room .lk .dislike-button {
+  background-color: #f44336;
+  color: white;
+  font-size: 14px;
+  border: none;
+  border-radius: 12px;
+  cursor: pointer;
+  padding: 8px 12px;
+  outline: none;
+  position: relative;
+  z-index: 0;
+}
+
+.room-box .room .lk .dislike-button:hover {
+  background-color: #da190b;
+}
+
+/* Buy Button */
+.room-box .room .lk .buy-button {
+  background-color: #008cba;
+  color: white;
+  font-size: 14px;
+  border: none;
+  border-radius: 12px;
+  cursor: pointer;
+  padding: 8px 12px;
+  outline: none;
+  position: relative;
+  z-index: 0;
+}
+
+.room-box .room .lk .buy-button:hover {
+  background-color: #007bb5;
+}
+
+/* Rent Button */
+.room-box .room .lk .rent-button {
+  background-color: #ff9800;
+  color: white;
+  font-size: 14px;
+  border: none;
+  border-radius: 12px;
+  cursor: pointer;
+  padding: 8px 12px;
+  outline: none;
+  position: relative;
+  z-index: 0;
+}
+
+.room-box .room .lk .rent-button:hover {
+  background-color: #fb8c00;
+}
+
+/* Agent Button */
+.room-box .room .lk .agent {
+  background-color: #6eb2f1;
+  color: white;
+  font-size: 14px;
+  border: none;
+  border-radius: 12px;
+  cursor: pointer;
+  padding: 8px 12px;
+  outline: none;
+  position: relative;
+  z-index: 0;
+}
+
+.room-box .room img {
+  width: 90%;
+  height: 70%;
+  background-size: cover;
+  background-position: center;
+  margin-bottom: 0;
+  border-radius: 10px;
+}
+
+.rooms .room:hover {
+  transition: transform 0.3s;
+  transform: scale(1.05);
+  box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.15);
+  cursor: pointer;
+}
+
+.rooms .room button:hover {
+  transition: transform 0.3s;
+  transform: scale(1.05);
+  box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.15);
+  cursor: pointer;
+  display: block;
+  filter: drop-shadow(0 0 10px #fffdef);
+}
+
+.rooms .room .details {
+  font-size: large;
+  background: blue;
+  color: white;
+  border-radius: 15px;
+  outline: none;
+  border: none;
+}
+
+.rooms .room i {
+  color: orange;
+  font-size: 0.9rem;
+}
+
+.course1 {
+  text-align: right;
+}
+.course1 h2 {
+  text-align: center;
+  color: orangered;
+  font-size: 30px;
+  margin-bottom: 0;
+  margin-top: 0;
+}
+
+.course1 i {
+  margin-right: 20px;
+  color: blue;
+  font-size: x-large;
+}
+
+.course1 button {
+  margin-right: 10px;
+  margin-bottom: 15px;
+  outline: none;
+  border: none;
+  padding: 20px 25px;
+  background-color: blue;
+  color: white;
+}
+
+.course2 {
+  text-align: right;
+}
+
+.course2 button {
+  margin-right: 10px;
+  margin-bottom: 15px;
+  outline: none;
+  border: none;
+  padding: 20px 25px;
+  color: blue;
+}
+
+.course2 button i {
+  margin-right: 10px;
+}
+
+.r-head {
+  margin-bottom: 2rem;
+}
+
+.icons {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+}
+
+.icons .icon button {
+  margin-right: 10px;
+  margin-bottom: 15px;
+  outline: none;
+  border: none;
+  padding: 20px 25px;
+  color: black;
+  margin-left: 40px;
+}
+
+.icons .icon button i {
+  margin-right: 10px;
+}
+
+.hero-container {
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+}
+
+.hero-left {
+  text-align: left;
+  margin-left: 100px;
+}
+
+.hero-right {
+  text-align: right;
+  margin-right: 100px;
+}
+
+.image-container {
+  max-width: 100%;
+
+  height: auto;
+  width: 30rem;
+  height: 35rem;
+  overflow: hidden;
+  border-radius: 15rem 15rem 0 0;
+  border: 8px solid rgba(255, 255, 255, o.12);
+  align-items: right;
+}
+
+.hero-left .first-span {
+  font-size: larger;
+  color: orangered;
+  font-weight: bold;
+}
+
+.hero-left .second-span {
+  font-size: 30px;
+  color: blue;
+  font-weight: bold;
+}
+
+.c-container {
+  width: 100%;
+  justify-content: left;
+  align-items: left;
+  margin-bottom: 0;
+}
+
+.c-container .contactInfo {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 0;
+}
+
+.c-container .contactInfo .box {
+  position: static;
+  padding: 20px 0;
+  display: flex;
+}
+
+.c-container .contactInfo .box .icon {
+  min-width: 60px;
+  height: 60px;
+  background: #fff;
+  color: blue;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  font-size: 22px;
+  margin-top: 22px;
+  margin-right: 0;
+}
+
+.c-container .contactInfo .box .text {
+  margin-left: 20px;
+  font-size: 16px;
+  flex-direction: column;
+  font-weight: 300;
+}
+
+.centerForm {
+  max-width: 400px;
+  margin: 40px auto;
+  padding: 20px;
+  background-color: #f9f9f9;
+  border: 1px solid #ddd;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+h2 {
+  font-size: 50px;
+  font-weight: bold;
+  margin-bottom: 30px;
+  text-align: center;
+  color: orangered;
+}
+
+.inputBox {
+  margin-bottom: 20px;
+}
+
+.inputBox input[type="text"],
+.inputBox textarea {
+  width: 100%;
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+}
+
+.inputBox input[type="text"]:focus,
+.inputBox textarea:focus {
+  border-color: #aaa;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+.inputBox span {
+  font-size: 14px;
+  color: #666;
+  display: block;
+  margin-top: 5px;
+}
+
+.inputBox input[type="submit"] {
+  background-color: blue;
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.inputBox input[type="submit"]:hover {
+  background-color: #61b1fc;
+}
+
+.footer {
+  width: 100%;
+  padding: 2rem 0;
+  background-color: rgb(212, 230, 230);
+}
+
+.footer .container-f {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1.2rem;
+}
+
+.footer .col {
+  margin: auto;
+}
+.footer h3 {
+  margin: 0.8rem 0;
+}
+
+.footer p {
+  margin: 0.4rem 0;
+}
+
+.footer .social {
+  text-align: center;
+}
+
+.footer i {
+  font-size: 2rem;
+  margin: 2rem 3rem;
+  color: #5651e5;
+}
+
+/* login page */
+
+.back img {
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  z-index: -1;
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  background-position: center;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  margin-bottom: 0;
+}
+
+.heros-container {
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+  margin-top: 4%;
+  position: initial;
+}
+
+.form-left {
+  text-align: left;
+  margin-left: 200px;
+  width: 420px;
+  background: transparent;
+  border: 2px solid rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(20px);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  color: white;
+  border-radius: 10px;
+  padding: 30px 40px;
+  position: initial;
+}
+
+.form-left h1 {
+  font-size: 36px;
+  text-align: center;
+  color: white;
+  margin-top: 0%;
+}
+
+.form-left .inputs-box {
+  width: 100%;
+  height: 100%;
+  margin: 30px 0;
+  position: relative;
+}
+
+.form-left .inputs-box input {
+  width: 100%;
+  height: 60px;
+  background: transparent;
+  border: none;
+  outline: none;
+  border: 2px solid rgba(255, 255, 255, 0.2);
+  border-radius: 40px;
+  font-size: 16px;
+  color: white;
+  padding: 20px, 45px, 20px, 20px;
+}
+
+.form-left .inputs-box input::placeholder {
+  color: white;
+}
+
+.form-left .inputs-box i {
+  position: absolute;
+  right: 20px;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 20px;
+}
+
+.form-left .remember-forgot {
+  display: flex;
+  justify-content: space-between;
+  font-size: 14.5px;
+  margin: -15px 0 15px;
+}
+
+.form-left .remember-forgot label input {
+  accent-color: white;
+  margin-right: 3px;
+}
+
+.form-left .remember-forgot a {
+  color: white;
+  text-decoration: none;
+  margin-right: 5px;
+}
+
+.form-left .remember-forgot a:hover {
+  text-decoration: underline;
+}
+
+.form-left .btn {
+  width: 100%;
+  height: 45px;
+  background-color: rgb(105, 105, 105);
+  border: none;
+  border-radius: 40px;
+  outline: none;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+  color: white;
+  font-weight: 600;
+}
+.form-left .btn:hover {
+  color: white;
+  background-color: rgb(197, 192, 192);
+}
+
+.form-left .register-link {
+  font-size: 14.5px;
+  text-align: center;
+  margin-top: 20px;
+  margin: 20px 0 15px;
+}
+
+.form-left .register-link p a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.form-left .register-link p a:hover {
+  text-decoration: underline;
+}
+
+.btn2 {
+  position: relative;
+  text-align: center;
+}
+
+.line {
+  display: inline-block;
+  position: relative;
+  font-style: italic;
+  padding: 0 10px;
+}
+
+.line::before,
+.line::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  width: 80px;
+  border-top: 1px solid #000;
+}
+
+.line::before {
+  left: -120px;
+}
+
+.line::after {
+  right: -120px;
+}
+
+.social {
+  text-align: center;
+}
+
+.social i {
+  font-size: 2rem;
+  margin-bottom: 0;
+  color: #5651e5;
+}
+
+.social i:hover {
+  cursor: pointer;
+  color: #61b1fc;
+}
+
+input[type="radio"] {
+  margin-right: 5px;
+}
+
+.radio-group {
+  display: flex;
+  align-items: center;
+}
+
+.radio-group label {
+  margin-right: 20px;
+}
+
+.form-right {
+  text-align: right;
+  margin-right: 200px;
+  background: transparent;
+  border: 2px solid rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(20px);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  color: white;
+  border-radius: 10px;
+  padding: 30px 40px 0 0;
+}
+
+.form-right h1 {
+  font-size: 2.5em;
+  font-weight: bold;
+  color: white;
+  text-transform: uppercase;
+  font-family: "Arial", sans-serif;
+  text-align: left;
+  margin-top: 150px;
+}
+
+/*SignIn*/
+
+.form-left2 {
+  text-align: left;
+  margin-left: 200px;
+  width: 750px;
+  background: transparent;
+  border: 2px solid rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(20px);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  color: white;
+  border-radius: 10px;
+  padding: 30px 40px;
+  position: initial;
+}
+
+.form-left2 h1 {
+  font-size: 36px;
+  text-align: center;
+  color: white;
+}
+
+.form-left2 .inputss-box {
+  display: flex;
+  justify-content: space-between;
+}
+
+.form-left2 .inputss-field {
+  position: relative;
+  width: 48%;
+  margin: 13px 0;
+}
+
+.form-left2 .inputss-box .inputss-field input {
+  width: 100%;
+  height: 60px;
+  background: transparent;
+  border: none;
+  outline: none;
+  border: 2px solid rgba(255, 255, 255, 0.2);
+  border-radius: 40px;
+  font-size: 16px;
+  color: white;
+  padding: 15px 15px 15px 40px;
+}
+
+.form-left2 .inputss-box .inputss-field input::placeholder {
+  color: white;
+}
+
+.form-left2 .inputss-box .inputss-field i {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  left: 15px;
+}
+
+.form-left2 label {
+  display: inline-block;
+  font-size: 14.5px;
+}
+
+.form-left2 label input {
+  accent-color: white;
+}
+
+.form-left2 .btn {
+  width: 100%;
+  height: 45px;
+  background-color: rgb(105, 105, 105);
+  border: none;
+  border-radius: 40px;
+  outline: none;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+  color: white;
+  font-weight: 600;
+  text-align: center;
+  margin-top: 8px;
+}
+
+.form-left2 .btn:hover {
+  color: white;
+  background-color: rgb(197, 192, 192);
+}
+
+.form-left2 .register-link {
+  text-align: center;
+}
+
+.form-left2 .register-link a {
+  color: #fff;
+}
+
+.form-left2 .register-link a:hover {
+  color: rgb(197, 192, 192);
+}
+
+@media (max-width: 576px) {
+  .form-left2 .inputss-field {
+    width: 100%;
+    margin: 10px 0;
+  }
+}
+
+/* Background Image */
+body {
+  margin-top: 150px;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  font-family: Arial, sans-serif;
+}
+
+.owner-dashboard {
+  background-color: #444343;
+  background-size: cover;
+  background-position: center;
+
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+  font-family: Arial, sans-serif;
+  background-color: #f9f9f9;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+  text-align: center;
+  color: #333;
+}
+
+form {
+  margin-bottom: 20px;
+}
+
+.form-section {
+  margin-bottom: 15px;
+}
+
+label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+input[type="file"],
+select {
+  width: calc(100% - 20px);
+  padding: 10px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 14px;
+}
+
+input[type="text"]:focus,
+input[type="email"]:focus,
+input[type="tel"]:focus,
+input[type="file"]:focus,
+select:focus {
+  border-color: #007bff;
+  outline: none;
+}
+
+button {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 4px;
+  background-color: #007bff;
+  color: white;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+button:disabled {
+  background-color: #ccc;
+}
+
+button:hover:not(:disabled) {
+  background-color: #0056b3;
+}
+
+.building-picture {
+  display: block;
+  max-width: 100%;
+  height: auto;
+  margin-top: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.uploaded-buildings-container {
+  margin-top: 20px;
+}
+
+.buildings-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.building-card {
+  border: 1px solid #ccc;
+  padding: 10px;
+  border-radius: 5px;
+  width: 200px;
+}
+
+.building-card img {
+  width: 100%;
+  height: auto;
+  border-radius: 5px;
+}
+
+.building-card p {
+  margin: 5px 0;
+}
+
+/*payment*/
+
+/*.payment-container {
+  position: relative;
+  display: flex;
+  gap: 20px;
+  margin-top: 20px;
+}
+
+.payment-form {
+  position: relative;
+  z-index: 1;
+  width: 100%;
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: rgba(255, 255, 255, 0.9);
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  justify-content: space-between;
+}
+
+
+.billing-address,
+.payment-details {
+  flex: 1;
+}
+
+.billing-address h2,
+.payment-details h2 {
+  margin-bottom: 10px;
+}
+
+.form-group {
+  margin-bottom: 15px;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 5px;
+}
+
+.form-group input[type='text'],
+.form-group input[type='email'],
+.form-group input[type='number'],
+.form-group select {
+  width: 100%;
+  padding: 8px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.credit-card-info img.credit-card-image {
+  max-width: 150px;
+  height: auto;
+  margin-top: 10px;
+}
+
+.submit-button {
+  display: block;
+  width: 100%;
+  padding: 10px;
+  background-color: #4caf50;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.submit-button:hover {
+  background-color: #45a049;
+}
+
+@media (max-width: 768px) {
+  .payment-container {
+    flex-direction: column;
+  }
+}*/
+
+/* Flex container for centering and spacing */
+.payment-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+/* Payment form layout */
+.payment-form {
+  display: flex; /* Use flexbox for layout */
+  justify-content: space-between; /* Space items evenly */
+  width: 100%;
+  max-width: 800px; /* Adjust max-width to fit both sections comfortably */
+  padding: 20px;
+  background-color: #f5f5f5; /* Light background color */
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Subtle box shadow */
+  margin-right: 300px;
+}
+
+/* Billing Address section */
+.billing-address {
+  flex: 1; /* Take up remaining space */
+  margin-right: 20px; /* Margin between sections */
+}
+
+/* Payment Details section */
+.payment-details {
+  flex: 1; /* Take up remaining space */
+}
+
+/* General form group styling */
+.form-group {
+  margin-bottom: 15px;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 5px;
+}
+
+.form-group input[type="text"],
+.form-group input[type="email"],
+.form-group input[type="number"],
+.form-group select {
+  width: 100%;
+  padding: 8px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+/* Submit button styling */
+.submit-button {
+  display: block;
+  width: 100%;
+  padding: 10px;
+  background-color: #4caf50; /* Green button background */
+  color: white;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease; /* Smooth hover transition */
+}
+
+.submit-button:hover {
+  background-color: #45a049; /* Darker green on hover */
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .payment-form {
+    flex-direction: column; /* Stack items vertically on smaller screens */
+  }
+
+  .billing-address,
+  .payment-details {
+    margin-right: 0; /* Remove margin between sections on smaller screens */
+  }
+}
+.video-tours {
+  padding: 50px 20px;
+  background-color: #fff;
+}
+
+.videos-grid {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.video-item {
+  margin: 10px;
+  text-align: center;
+}
+
+.video-item iframe {
+  width: 100%;
+  max-width: 560px;
+  height: 315px;
+}
+/* Container for the room boxes */
+.room-box {
+  display: flex;
+  justify-content: center; /* Center the items horizontally */
+  gap: 40px; /* Increase gap between room items */
+  flex-wrap: wrap; /* Allow wrapping for smaller screens */
+  margin-top: 40px; /* Add space at the top */
+  padding: 0 20px; /* Add padding to give space from the sides of the browser */
+}
+
+/* Individual room style */
+.room {
+  width: 500px; /* Set a fixed width for each room box */
+  position: relative;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  border-radius: 10px;
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.room img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.room h6 {
+  padding: 10px;
+  font-size: 18px;
+  text-align: center;
+  background-color: #f8f9fa;
+  margin: 0;
+}
+
+/* Style for the icon container */
+.list-icon-content {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background-color: rgba(0, 0, 0, 0.7);
+  padding: 5px 10px;
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.list-icon img {
+  height: 20px;
+  width: 20px;
+}
+
+.list-icon p {
+  color: #fff;
+  font-size: 16px;
+  margin: 0;
+}
+
+.room:hover {
+  transform: scale(1.05);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+}
+
+/* Container for buttons */
+.lk {
+  display: flex;
+  justify-content: space-around; /* Distribute buttons evenly */
+  padding: 10px;
+  background-color: #f8f9fa;
+  margin-top: 20px; /* Add margin to create space between the room boxes and buttons */
+}
+
+/* Button styles */
+button {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  padding: 10px 20px; /* Increase padding for larger button size */
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #0056b3;
+}
+
+/* Specific button styles */
+.like-button {
+  background-color: #28a745;
+}
+
+.like-button:hover {
+  background-color: #218838;
+}
+
+.dislike-button {
+  background-color: #dc3545;
+}
+
+.dislike-button:hover {
+  background-color: #c82333;
+}
+
+.buy-button {
+  background-color: #ffc107;
+  color: #212529;
+}
+
+.buy-button:hover {
+  background-color: #e0a800;
+}
+
+.rent-button {
+  background-color: #17a2b8;
+}
+
+.rent-button:hover {
+  background-color: #138496;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .room {
+    width: calc(50% - 20px); /* Adjust width for tablets */
+  }
+}
+
+@media (max-width: 480px) {
+  .room {
+    width: 100%; /* Full width for mobile devices */
+  }
+
+  .room-box {
+    gap: 20px; /* Reduce gap for smaller screens */
+  }
+
+  .lk {
+    flex-direction: column; /* Stack buttons vertically on small screens */
+    gap: 10px;
+  }
+
+  button {
+    width: 100%; /* Full width buttons on mobile */
+  }
+}
